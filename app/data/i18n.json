@@ -1,0 +1,14 @@
+// This is a simple implementation of a Polygloy dictionary. Where top level ISO strings are represented at the top level and
+// sub regions are represented as children. So en-US would result in an 'en' object with a 'US' child.
+{
+	"en": {
+		"US": {
+			"foo": "bar",
+			"blork": "baz"
+		}
+	},
+	"fr": {
+		"foo": "le bar",
+		"blork": "le baz"
+	}
+}
