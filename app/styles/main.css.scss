@@ -37,5 +37,11 @@ body {
 				color: #666;
 			}
 		}
+		a {
+			color: #444;
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 }

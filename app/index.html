@@ -14,8 +14,31 @@
         <script src="scripts/vendor/modernizr.min.js"></script>
     </head>
     <body>
+    <a href="https://github.com/JoePettersson/polyglot"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
     <div class="container">
-        Testing
+        <h1>Polyglot</h1>
+        <h2>A simple libaray for doing clientside i18n</h2>
+        <h3>Examples</h3>
+        <div id="target">
+            <div id="english-1">Default language set (en-US): <span></span></div>
+            <div id="french-1">French: <span></span></div>
+            <div id="spanish-1">Spanish: <span></span></div>
+            <div id="german-1">German: <span></span></div>
+            <div id="detected-1">Language detected from browser: <span></span></div>
+        </div>
+
+        <h4>Config</h4>
+        <p>Configuration of Polyglot is set in the <code>Polyglot.CONFIG</code> constant. By default, a statically defined dictionary is loaded at page on page load (as seen in the example).</p>
+        <p>However, if you would like to control the loading of the dictionary you can set <code>Polyglot.CONFIG.autoLoadDictionary</code> to <code>false</code>. You must then invoke <code>Polyglot.init()</code> to load the dictionary.</p>
+        <p>Some people would like to have even more control over which dictionary is loaded when, for instance loading <code>'dictionary_homepage.json'</code> on one page and <code>'dictionary_pricing.json'</code> on another. This can acheived by explicitly passing an absolute local path to the <code>Polyglot.init()</code> method. For instance <code>Polyglot.init('/i18n/dictionary_pricing.json')</code> will override whatever is set in <code>Polyglot.CONFIG.dictionaryUrl<code> for that page.</p>
+
+        <h4>Translating strings</h4>
+        <p>Once a dictionary has been loaded, you get a translation using the following Polyglot public method: <code>Polyglot.translate('i18n_key', 'iso_language_code')</code>. Doing so will return a string (providing one exists) in the language specified.</p>
+        <p>The second language argument is optional, as if not specified the <code>window.navigator.language</code> value is used. More here: <a href="https://developer.mozilla.org/en-US/docs/DOM/window.navigator.language">https://developer.mozilla.org/en-US/docs/DOM/window.navigator.language</a></p>
+        <p>If a language is requested which does not exist in the dictionary the string corresponding to the key in the <code>Polygloy.CONFIG.defaultLang</code> is returned.</p>
+
+        <h4>Dictionary setup</h4>
+        <p>Please see <code>/app/data/i18n.json</code> got a simple example.</p>
     </div>
 
     <!-- Jquery only included for demo purposes -->
@@ -23,5 +46,14 @@
     <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
 
     <script src="/scripts/polyglot.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#english-1 span').text(Polyglot.translate('foo', 'en-US'));
+        $('#french-1 span').text(Polyglot.translate('foo', 'fr'));
+        $('#spanish-1 span').text(Polyglot.translate('foo', 'es'));
+        $('#german-1 span').text(Polyglot.translate('foo', 'ge'));
+        $('#detected-1 span').text(Polyglot.translate('foo'));
+    });
+    </script>
     </body>
 </html>
