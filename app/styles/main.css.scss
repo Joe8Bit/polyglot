@@ -1,0 +1,41 @@
+body {
+	font-family: verdana, arial, helvetica, sans-serif;
+	background: #f3f3f3;
+	color: #444;
+	font-size: 16px;
+	line-height: 140%;
+	.container {
+		width: 700px;
+		margin: 35px auto;
+		background: #fff;
+		padding: 30px;
+		h1 {
+			font-size: 22px;
+			font-weight: normal;
+			margin: 0px 0px 5px;
+		}
+		h2 {
+			font-size: 18px;
+			margin: 0px 0px 25px;
+			font-weight: normal;
+			color: #999;
+			font-family: "Times New Roman", Georgia, serif;
+			font-style: italic;
+		}
+		#target {
+			font-family: monospace;
+			div {
+				margin-bottom: 15px;
+			}
+		}
+		p {
+			font-size: 14px;
+			code {
+				display:inline!important;
+				background: #f3f3f3;
+				padding: 0px 3px;
+				color: #666;
+			}
+		}
+	}
+}
