@@ -1,7 +1,24 @@
 {
-  "author": "",
-  "name": "",
-  "version": "0.0.0",
+  "name": "Polyglot",
+  "description": "A simple libaray for doing clientside i18n",
+  "author": {
+    "name": "Joe Pettersson",
+    "email": "me@joep.se"
+  },
+  "homepage": "https://github.com/JoePettersson/polyglot",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JoePettersson/polyglot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JoePettersson/polyglot/issues"
+  },
+  "version": "0.0.1",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "yeoman": "~0.9.6"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/yeoman test --verbose"
+  }
 }
