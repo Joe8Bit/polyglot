@@ -1,5 +1,5 @@
 ##Polyglot
-Polyglot is a very simple string replacement i18n library I built for a personal project and thought was self contained enough to warrant it's own repo. It's very simple to use, and does what it does very quicly indeed.
+Polyglot is a very simple string replacement i18n library I built for a personal project and thought was self contained enough to warrant it's own repo. It's very simple to use, and does what it does very quickly indeed.
 
 However, it is *not* a full i18n solution, it does not do any kind of: date; currency; time or any other i18n functions you might expect. It does one thing and does it well. It may do those things in the future however.
 
